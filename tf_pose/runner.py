@@ -2,7 +2,7 @@ import base64
 import os
 
 import cv2
-from functools import lru_cache
+import functools
 
 from tf_pose import common
 from tf_pose import eval
@@ -12,7 +12,7 @@ from tf_pose.networks import get_graph_path, model_wh
 Estimator = TfPoseEstimator
 
 
-@lru_cache(maxsize=1)
+@functools.lru_cache(maxsize=1)
 def get_estimator(model='cmu', resize='0x0'):
     w, h = model_wh(resize)
     if w == 0 or h == 0:

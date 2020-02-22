@@ -1,9 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import time
 import os
 import sys
 import ast
-
+sys.path.remove("")
 from threading import Lock
 import rospy
 import rospkg

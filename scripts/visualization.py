@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import time
 import cv2
 import rospy
@@ -64,7 +64,7 @@ def cb_pose(data):
 
     # draw
     image = TfPoseEstimator.draw_humans(image, humans, imgcopy=False)
-    pub_img.publish(cv_bridge.cv2_to_imgmsg(image, 'bgr8'))
+    pub_img.publish(cv_bridge.cv2_to_imgmsg(image))
 
 
 if __name__ == '__main__':

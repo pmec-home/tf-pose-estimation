@@ -53,7 +53,7 @@ setuptools.setup(
     author='Ildoo Kim',
     author_email='ildoo@ildoo.net',
     license='Apache License 2.0',
-    package_dir={'tf_pose_data': 'models'},
+    #package_dir={'tf_pose_data': 'models'},
     packages=['tf_pose_data'] +
              [pkg_name for pkg_name in setuptools.find_packages()  # main package
               if 'tf_pose' in pkg_name],
